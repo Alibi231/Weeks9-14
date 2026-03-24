@@ -269,7 +269,6 @@ GameObject:
   - component: {fileID: 308281957}
   - component: {fileID: 308281962}
   - component: {fileID: 308281961}
-  - component: {fileID: 308281960}
   m_Layer: 0
   m_Name: Knight
   m_TagString: Untagged
@@ -373,22 +372,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!111 &308281960
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 308281956}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Animation: {fileID: 0}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_UpdateMode: 0
-  m_CullingType: 0
 --- !u!82 &308281961
 AudioSource:
   m_ObjectHideFlags: 0
@@ -499,6 +482,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Footsteps
   footstep: {fileID: 308281961}
+  footstepClips:
+  - {fileID: 8300000, guid: 476aa9f4a282f654c821ac582627fa3a, type: 3}
+  - {fileID: 8300000, guid: c63d607fb1a92e5468e03ada4a4de5fe, type: 3}
+  - {fileID: 8300000, guid: b35afb4bd497602498acfad47c6708b7, type: 3}
+  - {fileID: 8300000, guid: 8d12e9621926ccd4ca038d19f07d3360, type: 3}
+  - {fileID: 8300000, guid: 2ce36ae6151dd2f40a7b43162ce7c781, type: 3}
+  - {fileID: 8300000, guid: 38e72764053362342b793ce75da8aea5, type: 3}
+  - {fileID: 8300000, guid: a349874bd7d76de459cad7cccef62842, type: 3}
+  - {fileID: 8300000, guid: 4212ed5daf4287a47a00228854ccc1de, type: 3}
+  - {fileID: 8300000, guid: b9da75967351a74478094b71aa51f3bc, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
