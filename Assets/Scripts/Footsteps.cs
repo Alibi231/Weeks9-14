@@ -18,5 +18,6 @@ public class Footsteps : MonoBehaviour
     public void Footstep()
     {
         footstep.Play();
+        Debug.Log("WWW");
     }
 }
