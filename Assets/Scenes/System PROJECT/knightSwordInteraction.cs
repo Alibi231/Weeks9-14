@@ -35,7 +35,10 @@ public class knightSwordInteraction : MonoBehaviour
                 sword.GetComponent<swordScript>().dropSword();
             sword = collision.gameObject;
             sword.transform.parent = transform;
-            sword.transform.position = transform.position;
+            Vector2 newPos = transform.position;
+            newPos.y += .5f;
+
+            sword.transform.position = newPos;
 
         }
     }

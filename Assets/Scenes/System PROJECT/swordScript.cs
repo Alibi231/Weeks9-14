@@ -51,7 +51,8 @@ public class swordScript : MonoBehaviour
         }
 
         Debug.Log("SWING");
-        //Instantiate(visualSwing, transform.position, Quaternion.identity);
+        Instantiate(visualSwing, transform.position, Quaternion.identity);
         StopCoroutine(swing);
+        swing = null;
     }
 }
