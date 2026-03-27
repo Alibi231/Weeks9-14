@@ -51,7 +51,8 @@ public class swordScript : MonoBehaviour
         }
 
         Debug.Log("SWING");
-        Instantiate(visualSwing, transform.position, Quaternion.identity);
+        GameObject vSwing = Instantiate(visualSwing, transform.position, Quaternion.identity);
+        vSwing.transform.localScale = transform.parent.localScale;
         StopCoroutine(swing);
         swing = null;
     }
