@@ -21,7 +21,8 @@ public class knightSwordInteraction : MonoBehaviour
 
         if (collision.GetComponent<swordScript>() != null)
         {
-            sword.GetComponent<swordScript>().dropSword();
+            if (sword != null)
+                sword.GetComponent<swordScript>().dropSword();
             sword = collision.gameObject;
             sword.transform.parent = transform;
             sword.transform.position = transform.position;
