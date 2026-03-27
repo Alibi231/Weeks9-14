@@ -50,10 +50,8 @@ public class swordScript : MonoBehaviour
             yield return null;
         }
 
-        Instantiate(visualSwing, transform.position, Quaternion.identity);
+        Debug.Log("SWING");
+        //Instantiate(visualSwing, transform.position, Quaternion.identity);
         StopCoroutine(swing);
-
-
-
     }
 }

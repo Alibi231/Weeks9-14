@@ -4,7 +4,6 @@ using UnityEngine.InputSystem;
 public class knightSwordInteraction : MonoBehaviour
 {
     public GameObject sword;
-    public Component swordScript;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
