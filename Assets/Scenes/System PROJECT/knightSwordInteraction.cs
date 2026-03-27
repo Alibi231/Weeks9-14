@@ -22,11 +22,9 @@ public class knightSwordInteraction : MonoBehaviour
         if (collision.GetComponent<swordScript>() != null)
         {
             sword.GetComponent<swordScript>().dropSword();
-
             sword = collision.gameObject;
-
-            collision.transform.parent = transform;
-            collision.transform.position = transform.position;
+            sword.transform.parent = transform;
+            sword.transform.position = transform.position;
 
         }
     }

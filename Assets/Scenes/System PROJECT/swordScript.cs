@@ -32,7 +32,10 @@ public class swordScript : MonoBehaviour
 
     public void dropSword()
     {
+        print("RUNNING");
         transform.parent = null;
+        if (swing != null)
+            StopCoroutine(swing);
         Destroy(gameObject);
         
     }
