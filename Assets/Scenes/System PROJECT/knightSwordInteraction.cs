@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class knightSwordInteraction : MonoBehaviour
 {
@@ -14,6 +15,16 @@ public class knightSwordInteraction : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void onAttack(InputAction.CallbackContext context)
+    {
+        if (context.phase == InputActionPhase.Started)
+        {
+            if (sword != null)
+                sword.GetComponent<swordScript>().swingSword();
+        }
+
     }
 
     void OnTriggerEnter2D(Collider2D collision)
