@@ -30,6 +30,13 @@ public class swordScript : MonoBehaviour
         }
     }
 
+    public void dropSword()
+    {
+        transform.parent = null;
+        Destroy(gameObject);
+        
+    }
+
     IEnumerator swingSwordCoroutine()
     {
         float timer = 0;
