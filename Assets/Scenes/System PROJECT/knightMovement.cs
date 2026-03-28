@@ -39,6 +39,7 @@ public class knightMovement : MonoBehaviour
             movement.y = 0;
         }
 
+        // If the player would move out of the screen's bounds, it is returned to the edge of the screen.
         Vector2 screenPos = Camera.main.WorldToScreenPoint(transform.position);
         if ( screenPos.x < 0)
         {

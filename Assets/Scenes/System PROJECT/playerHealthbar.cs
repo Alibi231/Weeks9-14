@@ -8,17 +8,19 @@ public class playerHealthbar : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        //When the game starts, the lose screen is hidden.
         lossScreen.gameObject.SetActive(false);
-        healthBar = GetComponent<Slider>();
     }
 
 
     public void reduceHealth()
     {
+        //This is called by a unity event when the player loses health. It reduces health by 20, and ends the game if health < 0.
         healthBar.value -= 20;
         if (healthBar.value <= 0)
         {
             lossScreen.gameObject.SetActive(true);
+            Time.timeScale = 0f;
         }
     }
 

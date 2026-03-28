@@ -3,18 +3,15 @@ using UnityEngine.UIElements;
 
 public class swordSpawner : MonoBehaviour
 {
+    //Swordlist is an array of all the different sword types
     public GameObject[] swordList;
     public float timer;
     public float spawnTime = 10;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
     {
+        //One the timer reaches the spawn time, it is reset and a random sword is spawned on the ground.
         timer += Time.deltaTime;
         if (timer > spawnTime)
         {

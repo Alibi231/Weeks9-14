@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class bossHealthbar : MonoBehaviour
 {
@@ -11,17 +12,23 @@ public class bossHealthbar : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        //The player win screen is made invisible when the game starts.
         winScreen.gameObject.SetActive(false);
-        healthBar = GetComponent<Slider>();
     }
 
 
     public void reduceHealth()
     {
+        /* The boss's health is reduced by 1 whenever its hit. 
+         * the player win screen is made visible once the bosses health hit's zero.
+        Additionally, when the bosses health hits 55 and 25, it is put into a stagger state where it stays locked
+        in place for three seconds.
+        */
         healthBar.value -= 1;
         if (healthBar.value <= 0)
         {
             winScreen.gameObject.SetActive(true);
+            Time.timeScale = 0f;
 
         } else if (healthBar.value <= 25 && stagger2 == false) {
             boss.GetComponent<bossBehavior>().staggerState();
