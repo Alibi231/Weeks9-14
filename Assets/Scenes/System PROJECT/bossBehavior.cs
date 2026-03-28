@@ -8,10 +8,15 @@ public class bossBehavior : MonoBehaviour
     public int behavior = 1;
     public Coroutine currentAction = null;
     public float timer;
+    public GameObject fireball;
+    public GameObject explosion;
+    public GameObject groundSpikes;
+    Renderer renderer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        renderer = GetComponent<Renderer>();
         behavior = Random.Range(1, 4);
         switch (behavior)
         {
@@ -50,14 +55,16 @@ public class bossBehavior : MonoBehaviour
 
     IEnumerator Attack1()
     {
-        while (timer < 1)
+        renderer.material.color = Color.red;
+        while (timer < 0.5f)
         {
             timer += Time.deltaTime;
             yield return null;
 
         }
-        //Instantiate Fireball
-        while (timer < 6)
+        GameObject fBall = Instantiate(fireball, new Vector3(transform.position.x, transform.position.y - 1.5f, transform.position.z), Quaternion.identity);
+        renderer.material.color = Color.white;
+        while (timer < 2)
         {
             timer += Time.deltaTime;
             yield return null;
@@ -71,14 +78,16 @@ public class bossBehavior : MonoBehaviour
 
     IEnumerator Attack2()
     {
-        while (timer < 3)
+        renderer.material.color = Color.yellow;
+        while (timer < 1)
         {
             timer += Time.deltaTime;
             yield return null;
 
         }
-        //Instantiate Explosion
-        while (timer < 6)
+        GameObject xPlosion = Instantiate(explosion, transform.position, Quaternion.identity);
+        renderer.material.color = Color.white;
+        while (timer < 4)
         {
             timer += Time.deltaTime;
             yield return null;
@@ -91,14 +100,19 @@ public class bossBehavior : MonoBehaviour
 
     IEnumerator Attack3()
     {
+        renderer.material.color = Color.blue;
         while (timer < 1)
         {
             timer += Time.deltaTime;
             yield return null;
 
         }
-        //Instantiate Multiple Spikes
-        while (timer < 3)
+        for (int i = 0; i < 15; i++)
+        {
+            GameObject spike = Instantiate(groundSpikes, new Vector3(transform.position.x +2 - (i * 2.5f), transform.position.y, transform.position.z), Quaternion.identity);
+        }
+        renderer.material.color = Color.white;
+        while (timer < 2)
         {
             timer += Time.deltaTime;
             yield return null;
