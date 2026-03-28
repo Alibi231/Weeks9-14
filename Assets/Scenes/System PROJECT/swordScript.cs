@@ -32,7 +32,6 @@ public class swordScript : MonoBehaviour
 
     public void dropSword()
     {
-        print("RUNNING");
         transform.parent = null;
         if (swing != null)
             StopCoroutine(swing);
@@ -49,8 +48,6 @@ public class swordScript : MonoBehaviour
             timer += Time.deltaTime;
             yield return null;
         }
-
-        Debug.Log("SWING");
         GameObject vSwing = Instantiate(visualSwing, transform.position, Quaternion.identity);
         vSwing.transform.localScale = transform.parent.localScale;
         StopCoroutine(swing);

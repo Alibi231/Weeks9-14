@@ -144,8 +144,10 @@ public class bossBehavior : MonoBehaviour
     {
         if (collision.GetComponent<swingScript>() != null)
         {
+            UnityEngine.Debug.Log("Hit Detected");
             if (collision.GetComponent<swingScript>().swingActive)
             {
+                UnityEngine.Debug.Log("shouldBeWorking");
                 bossHit.Invoke();
                 collision.GetComponent<swingScript>().swingActive = false;
             }

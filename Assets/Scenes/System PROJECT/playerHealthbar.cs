@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class playerHealthbar : MonoBehaviour
 {
     public Slider healthBar;
+    public GameObject lossScreen;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -16,13 +17,13 @@ public class playerHealthbar : MonoBehaviour
         healthBar.value -= 20;
         if (healthBar.value < 0)
         {
-            //LOSE
+            lossScreen.SetActive(true);
         }
     }
 
     public void increaseHealth()
     {
-        healthBar.value += 5;
+        healthBar.value += 1;
         if (healthBar.value > 100)
         {
             healthBar.value = 100;

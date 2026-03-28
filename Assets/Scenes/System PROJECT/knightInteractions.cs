@@ -50,19 +50,16 @@ public class knightSwordInteraction : MonoBehaviour
         }
         else if (collision.GetComponentInParent<iceSpikeScript>() != null && invincibility <= 0)
         {
-            Debug.Log("HIT iceSpike");
             invincibility = 1.5f;
             hit.Invoke();
         }
         else if (collision.GetComponent<explosionScript>() != null && invincibility <= 0)
         {
-            Debug.Log("HIT explosion");
             invincibility = 1.5f;
             hit.Invoke();
         }
         else if (collision.GetComponent<fireballScript>() != null && invincibility <= 0)
         {
-            Debug.Log("HIT FireBall");
             invincibility = 1.5f;
             hit.Invoke();
         }
