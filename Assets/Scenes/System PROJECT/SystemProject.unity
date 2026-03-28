@@ -183,7 +183,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -3
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.09898733, g: 0.48427665, b: 0.16181277, a: 1}
@@ -5410,7 +5410,7 @@ MonoBehaviour:
   movement: {x: 0, y: 0}
   runSpeed: 5
   animator: {fileID: 308281957}
-  jump: 10
+  jump: 15
   ySpeed: 0
   gravity: -50
 --- !u!114 &308281966
@@ -5730,6 +5730,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1941664316}
   - component: {fileID: 1941664315}
+  - component: {fileID: 1941664317}
   m_Layer: 0
   m_Name: 'Boss '
   m_TagString: Untagged
@@ -5805,12 +5806,29 @@ Transform:
   m_GameObject: {fileID: 1941664314}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.464, y: -2.186, z: 0}
+  m_LocalPosition: {x: 7, y: -2.186, z: 0}
   m_LocalScale: {x: -3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1941664317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941664314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7eb6734a52e0e64696b11b9e0d75924, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::bossBehavior
+  behavior: 1
+  timer: 0
+  fireball: {fileID: 5942354257152518928, guid: d9179ba9074495f409dda8ef118f290f, type: 3}
+  explosion: {fileID: 6695740817269849734, guid: 252de79e40cae1e44945d185512fdc07, type: 3}
+  groundSpikes: {fileID: 5852157022172051160, guid: faf7db7f32d7d6e41a9755b38d808000, type: 3}
 --- !u!1 &2140324589
 GameObject:
   m_ObjectHideFlags: 0
