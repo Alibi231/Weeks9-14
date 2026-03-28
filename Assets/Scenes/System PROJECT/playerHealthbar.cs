@@ -8,6 +8,7 @@ public class playerHealthbar : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        lossScreen.gameObject.SetActive(false);
         healthBar = GetComponent<Slider>();
     }
 
@@ -15,9 +16,9 @@ public class playerHealthbar : MonoBehaviour
     public void reduceHealth()
     {
         healthBar.value -= 20;
-        if (healthBar.value < 0)
+        if (healthBar.value <= 0)
         {
-            lossScreen.SetActive(true);
+            lossScreen.gameObject.SetActive(true);
         }
     }
 

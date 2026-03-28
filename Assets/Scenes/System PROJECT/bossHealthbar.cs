@@ -11,6 +11,7 @@ public class bossHealthbar : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        winScreen.gameObject.SetActive(false);
         healthBar = GetComponent<Slider>();
     }
 
@@ -18,9 +19,10 @@ public class bossHealthbar : MonoBehaviour
     public void reduceHealth()
     {
         healthBar.value -= 1;
-        if (healthBar.value < 0)
+        if (healthBar.value <= 0)
         {
-            winScreen.SetActive(true);
+            winScreen.gameObject.SetActive(true);
+
         } else if (healthBar.value <= 25 && stagger2 == false) {
             boss.GetComponent<bossBehavior>().staggerState();
             stagger2 = true;
