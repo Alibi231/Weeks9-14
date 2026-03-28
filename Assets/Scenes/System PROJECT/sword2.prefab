@@ -153,4 +153,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::swordScript
   weaponType: 0
   swingTime: 0.3
-  visualSwing: {fileID: 3179202580529990481, guid: 872cb86ad0c28064cb38aafcc2455b8c, type: 3}
+  visualSwing: {fileID: 3179202580529990481, guid: a4870580cf1b739488192fc954391150, type: 3}

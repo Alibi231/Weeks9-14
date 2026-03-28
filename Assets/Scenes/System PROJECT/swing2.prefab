@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7094907839255824029}
   - component: {fileID: 2672479021882693934}
   m_Layer: 0
-  m_Name: swing1
+  m_Name: swing2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -81,7 +81,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 1.7296162, y: 0.028162032}
+  m_Offset: {x: 2.2142386, y: 0.04379505}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -91,7 +91,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.8213925, y: 0.59634453}
+  m_Size: {x: 2.790639, y: 0.28652692}
   m_EdgeRadius: 0
 --- !u!1 &6692674480425294709
 GameObject:
@@ -119,8 +119,8 @@ Transform:
   m_GameObject: {fileID: 6692674480425294709}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: 0.7071068, w: -0.7071068}
-  m_LocalPosition: {x: 1.468, y: 0.037, z: 0}
-  m_LocalScale: {x: 0.4633346, y: 1.921678, z: 1}
+  m_LocalPosition: {x: 1.8028, y: 0.0455, z: 0}
+  m_LocalScale: {x: 0.23025468, y: 3.0814106, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6609675914546152752}
@@ -175,7 +175,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  m_Color: {r: 0, g: 1, b: 0.925915, a: 1}
+  m_Color: {r: 1, g: 0.06770831, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
