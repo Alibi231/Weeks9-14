@@ -7013,7 +7013,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36d296a94e18ab6468001a6aa3508ab0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::bossHealthbar
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 1996450662}
   stagger1: 0
   stagger2: 0
   boss: {fileID: 1941664314}
