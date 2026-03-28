@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Diagnostics;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class bossBehavior : MonoBehaviour
 {
@@ -11,6 +13,7 @@ public class bossBehavior : MonoBehaviour
     public GameObject fireball;
     public GameObject explosion;
     public GameObject groundSpikes;
+    public UnityEvent bossHit;
     Renderer renderer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -121,6 +124,41 @@ public class bossBehavior : MonoBehaviour
         StopCoroutine(currentAction);
         timer = 0;
         currentAction = null;
+    }
+
+    IEnumerator stagger()
+    {
+        renderer.material.color = Color.pink;
+        while (timer < 3)
+        {
+            timer += Time.deltaTime;
+            yield return null;
+
+        }
+        StopCoroutine(currentAction);
+        timer = 0;
+        currentAction = null;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.GetComponent<swingScript>() != null)
+        {
+            if (collision.GetComponent<swingScript>().swingActive)
+            {
+                bossHit.Invoke();
+                collision.GetComponent<swingScript>().swingActive = false;
+            }
+        }
+         
+    }
+
+    public void staggerState()
+    {
+        StopCoroutine(currentAction);
+        timer = 0;
+        currentAction = null;
+        currentAction = StartCoroutine(stagger());
     }
 
 }
