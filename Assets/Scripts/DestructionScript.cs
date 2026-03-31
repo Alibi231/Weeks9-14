@@ -9,6 +9,7 @@ public class DestructionScript : MonoBehaviour
     public GameObject pot;
     public GameObject barrel;
     public Coroutine crumble;
+    public ParticleSystem particles;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -23,6 +24,7 @@ public class DestructionScript : MonoBehaviour
 
     public IEnumerator DestroyBuilding()
     {
+        particles.Play();
         crumble = StartCoroutine(ShrinkBuilding(chest));
         yield return new WaitForSeconds(crumbleTimer);
         crumble = StartCoroutine(ShrinkBuilding(pot));
